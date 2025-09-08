@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import CoinCard from "./components/CoinCard";
+import LimitCard from "./components/LimitCard";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -35,16 +36,7 @@ function App() {
       <section className='flex gap-4 justify-between place-items-center items-center w-full p-4'>
         <h1 className='text-4xl font-bold mb-8 text-white'>Crypto Dashboard</h1>
         <p className='text-white p-4'>Powered by CoinGecko API</p>
-        <div className="border border-gray-300 rounded-md p-2 text-black">
-          <label htmlFor="limit" className="text-white">Show: </label>
-          <select id="limit" className="text-black bg-gray-200 p-2 ml-2" value={limit} onChange={(e) => setLimit(Number(e.target.value))}>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-          </select>
-        </div>
+        <LimitCard limit={limit} onLimitChange={setLimit} />
       </section>
 
       {loading ? (
