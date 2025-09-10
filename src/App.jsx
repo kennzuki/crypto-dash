@@ -3,6 +3,7 @@ import HomePage from "./pages/homePage";
 import AboutPage from "./pages/about";
 import { Route, Routes } from "react-router";
 import Header from "./components/Header";
+import NotFoundPage from "./pages/notFound";
 
 
 
@@ -44,7 +45,8 @@ function App() {
       <Header />
      <Routes>
       <Route path="/" element={<HomePage coins={coins} loading={loading} error={error} limit={limit} setLimit={setLimit} filter={filter} setFilter={setFilter} order={order} setOrder={setOrder} />} />
-      <Route path="/about" element={<AboutPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="*" element={<NotFoundPage/>} />
       </Routes>
     </div>
    
