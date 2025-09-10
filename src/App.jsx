@@ -4,6 +4,7 @@ import AboutPage from "./pages/about";
 import { Route, Routes } from "react-router";
 import Header from "./components/Header";
 import NotFoundPage from "./pages/notFound";
+import CoinDetailPage from "./pages/coin-detail";
 
 
 
@@ -46,6 +47,7 @@ function App() {
      <Routes>
       <Route path="/" element={<HomePage coins={coins} loading={loading} error={error} limit={limit} setLimit={setLimit} filter={filter} setFilter={setFilter} order={order} setOrder={setOrder} />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/coin/:id" element={<CoinDetailPage />} />
         <Route path="*" element={<NotFoundPage/>} />
       </Routes>
     </div>
