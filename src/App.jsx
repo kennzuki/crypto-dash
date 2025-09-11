@@ -4,7 +4,7 @@ import AboutPage from "./pages/about";
 import { Route, Routes } from "react-router";
 import Header from "./components/Header";
 import NotFoundPage from "./pages/notFound";
-import CoinDetailPage from "./pages/coin-detail";
+import CoinDetailPage from "./pages/coinDetail";
 
 
 

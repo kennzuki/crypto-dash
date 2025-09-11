@@ -50,7 +50,7 @@ const HomePage = ({
         </section>
 
         {loading ? (
-          <Spinner/>
+          <Spinner color="white"/>
         ) : error ? (
           <p>Error: {error}</p>
         ) : (
