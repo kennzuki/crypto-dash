@@ -29,7 +29,7 @@ const CoinDetailsPage = () => {
   }, [id]);
 
   return (
-    <div className='flex flex-col items-center space-y-4'>
+    <div className='flex flex-col items-center space-y-4 p-16'>
       <Link className="underline text-blue-500" to='/'>← Back To Home</Link>
 
       <h1 className=''>
@@ -113,7 +113,7 @@ const CoinDetailsPage = () => {
               </p>
             )}
             {coin.categories.length > 0 && (
-              <p>Categories: {coin.categories.join(', ')}</p>
+              <p className="text-center">Categories: {coin.categories.join(', ')}</p>
             )}
           </div>
         </>

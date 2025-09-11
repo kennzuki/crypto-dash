@@ -22,12 +22,12 @@ ChartJS.register(
   TimeScale
 );
 
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_COIN_API_URL;
 
 const CoinChart = ({ coinId }) => {
   const [chartData, setChartData] = useState(null);
-    const [loading, setLoading] = useState(true);
-      useEffect(() => {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
     const fetchPrices = async () => {
       const res = await fetch(
         `${API_URL}/${coinId}/market_chart?vs_currency=usd&days=7`
@@ -62,9 +62,37 @@ const CoinChart = ({ coinId }) => {
 
   if (loading) return <p>Loading Chart...</p>;
   return (
-    <div className=''>
-      <>chart</>
+    
+      <div className="mt-7">
+      <Line
+        data={chartData}
+        options={{
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            tooltip: { mode: 'index', intersect: false },
+          },
+          scales: {
+            x: {
+              type: 'time',
+              time: {
+                unit: 'day',
+              },
+              ticks: {
+                autoSkip: true,
+                maxTicksLimit: 7,
+              },
+            },
+            y: {
+              ticks: {
+                callback: (value) => `$${value.toLocaleString()}`,
+              },
+            },
+          },
+        }}
+      />
     </div>
+    
   );
 };
 
