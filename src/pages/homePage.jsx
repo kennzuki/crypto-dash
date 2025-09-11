@@ -2,6 +2,7 @@ import CoinCard from '../components/CoinCard'
 import LimitCard from '../components/LimitCard';
 import FilterInput from '../components/FilterInput';
 import SortSelector from '../components/SortSelect';
+import Spinner from "../components/Spinner";
 
 const HomePage = ({
   coins,
@@ -49,7 +50,7 @@ const HomePage = ({
         </section>
 
         {loading ? (
-          <p>Loading...</p>
+          <Spinner/>
         ) : error ? (
           <p>Error: {error}</p>
         ) : (
