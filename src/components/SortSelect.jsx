@@ -6,7 +6,7 @@ const SortSelector = ({ order, onChangeSort }) => {
         id=''
         value={order}
         onChange={(e) => onChangeSort(e.target.value)}
-        className='text-black bg-gray-200 p-2 w-full'
+        className='text-black bg-gray-200 p-2 w-full flex gap-2 place-items-center'
       >
         <option value='market_cap_desc'>Market Cap(high to low)</option>
         <option value='market_cap_desc'>Market Cap(low to high)</option>
