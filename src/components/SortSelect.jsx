@@ -1,6 +1,6 @@
 const SortSelector = ({ order, onChangeSort }) => {
   return (
-    <div className=''>
+    <div className='w-1/2'>
       <select
         name=''
         id=''

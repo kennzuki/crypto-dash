@@ -39,11 +39,9 @@ const HomePage = ({
   return (
     <>
       <div className='bg-black max-w-full flex flex-col justify-center items-center p-16'>
-        <section className='flex flex-col space-y-4 w-full p-4'>
-          <h1 className='text-4xl font-bold mb-8 text-white'>
-            Crypto Dashboard
-          </h1>
-          <p className='text-white p-4 text-center'>Powered by CoinGecko API</p>
+        <section className='flex gap-4 justify-evenly w-full place-items-center p-4'>
+         
+         
           <FilterInput filter={filter} onChangeFilter={setFilter} />
           <LimitCard limit={limit} onLimitChange={setLimit} />
           <SortSelector order={order} onChangeSort={setOrder} />
