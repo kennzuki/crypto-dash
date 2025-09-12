@@ -1,6 +1,6 @@
 const SortSelector = ({ order, onChangeSort }) => {
   return (
-    <div className='w-1/2'>
+    <div className='w-1/2 flex gap-2 place-items-center'>
       <select
         name=''
         id=''
